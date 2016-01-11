@@ -1,0 +1,30 @@
+# yaml file to define one or more local task(s).
+#
+# Definitions can contain any of the following:
+# title: (required) The untranslated title of the menu link.
+# description: The untranslated description of the link.
+# route_name: (optional) The route name to be used to build the path. Either a
+#   route_name or a link_path must be provided.
+# base_route: Used to group together related tabs.
+# parent_id: Use the parent_id to relate a tab to a parent tab for multiple
+#   levels of tabs.
+# route_parameters: (optional) The route parameters to build the path. An array.
+# link_path: (optional) If you have an external link use link_path instead of
+#   providing a route_name.
+# weight: (optional) An integer that determines the relative position of items
+#   in the menu; higher-weighted items sink. Defaults to 0.
+#   Menu items with the same weight are ordered alphabetically.
+# options: (optional) An array of options to be passed to l() when generating
+#   a link from this menu item.
+
+resume.tab_1:
+  route_name : resume.form
+  title: Resume
+  base_route: resume.form
+  weight: 10
+
+resume.tab_2:
+  route_name: work.form
+  title: Work
+  base_route: resume.form
+  weight: 20
